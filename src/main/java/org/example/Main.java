@@ -16,5 +16,8 @@ public class Main {
         }
 
         Utilities.print();
+
+        Logger logger = new Logger();
+        logger.log();
     }
 }
