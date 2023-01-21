@@ -11,7 +11,7 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FirstTryTelegramBot extends TelegramLongPollingBot {
+public class FirstTryTelegramBot extends TelegramLongPollingBot implements Settings {
 
     @Override
     public String getBotUsername() {
@@ -88,10 +88,20 @@ public class FirstTryTelegramBot extends TelegramLongPollingBot {
         keyboardList.add(secondRow);
 
         mainMenuKeyboard.setKeyboard(keyboardList); // добавляем список строк с кнопками к объекту клавиатуры
+
+
+
+
+        read();
     }
 
     // создаем клавиатуру меню "Статистика"
     private void setStatisticsKeyboard(SendMessage message) {
 
+    }
+
+    @Override
+    public void read() {
+        System.out.println("read()");
     }
 }
